@@ -2,12 +2,12 @@ version: '3.9'
 
 services:
   front:
-    container_name: remix-app-container
+    container_name: remix-fw-container
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - './front-remix/:/usr/src/remix-app'
-      - './front-remix/node_modules/:/usr/src/remix-app/node_modules'
+      - './front-remix/:/usr/src/front-remix'
+      - './front-remix/node_modules/:/usr/src/front-remix/node_modules'
     ports:
       - '3007:3000'

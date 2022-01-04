@@ -2,10 +2,10 @@
 FROM node:16-alpine
 
 # set working directory
-WORKDIR /usr/src/remix-app
+WORKDIR /usr/src/front-remix
 
 # add `/usr/src/remix-app/node_modules/.bin` to $PATH
-ENV PATH /usr/src/remix-app/node_modules/.bin:$PATH
+ENV PATH /usr/src/front-remix/node_modules/.bin:$PATH
 
 # install and cache app dependencies
 COPY ./front-remix/package.json .

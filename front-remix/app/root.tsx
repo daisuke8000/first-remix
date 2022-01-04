@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -23,6 +24,7 @@ export default function App() {
       </head>
       <body>
         <Outlet />
+        <Link to="/posts">Posts</Link>
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}
