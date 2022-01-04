@@ -4,3 +4,4 @@
 # IntelliJ project files
 .idea
 /front-remix/node_modules
+.DS_Store

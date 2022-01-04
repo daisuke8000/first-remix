@@ -14,4 +14,4 @@ RUN npm ci
 RUN npm install react-scripts@4.0.3 -g --silent
 
 # start app
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]
