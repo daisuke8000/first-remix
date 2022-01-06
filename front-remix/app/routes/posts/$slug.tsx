@@ -13,8 +13,6 @@ export const loader: LoaderFunction = async ({
 export default function PostSlug() {
     const post = useLoaderData();
     return (
-        <div>
-            <h1>{post.title}</h1>
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
     );
 }
