@@ -1,9 +1,19 @@
 import {getPosts} from "~/post";
-import {Link, useLoaderData} from "remix";
+import { Outlet, Link, useLoaderData} from "remix";
 import type { Post } from "~/post";
+import adminStyles from "~/styles/admin.css";
 
 export const loader = () => {
     return getPosts();
+}
+
+export const links = () => {
+    return [
+        {
+            rel: "stylesheet",
+            href: adminStyles
+        }
+    ];
 }
 
 export default function Admin() {
@@ -21,7 +31,9 @@ export default function Admin() {
                         </li>))}
                 </ul>
             </nav>
-            <main>...</main>
+            <main>
+                <Outlet />
+            </main>
         </div>
     );
 }
